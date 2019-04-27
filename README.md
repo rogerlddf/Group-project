@@ -32,5 +32,5 @@ Once you are done will all of that, the magic AteBall will display a modal with 
     * If you would like to be redirected to the website or the yelp page
     * And if you would like to be redirected to open table to make a reservation (if the restaurant offers that option.)
 
-If you are not satisfied with the random restaurt, you can *shake* again to get a new one. 
+If you are not satisfied with the random restaurant, you can *shake* again to get a new one. 
 
