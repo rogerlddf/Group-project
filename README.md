@@ -25,12 +25,13 @@ Basically, AteBall is for anyone and everyone that is hungry, indecisive, or bot
 3. If you don't have any preferences then press **submit**!
 
 Once you are done will all of that, the magic AteBall will display a modal with the the random restaurant. The modal will show:
-    1. The restaurant name
-    2. The address 
-    3. Star rating
-    4. Price range
-    5. If you would like to be redirected to the website or the yelp page
-    6. And if you would like to be redirected to open table to make a reservation (if the restaurant offers that option.)
+
+    * The restaurant name
+    * The address 
+    * Star rating
+    * Price range
+    * If you would like to be redirected to the website or the yelp page
+    * And if you would like to be redirected to open table to make a reservation (if the restaurant offers that option.)
 
 If you are not satisfied with the random restaurant, you can *shake* again to get a new one. 
 
