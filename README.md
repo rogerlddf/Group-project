@@ -16,7 +16,7 @@ Basically, AteBall is for anyone and everyone that is hungry, indecisive, or bot
 
 ### How does it work? 
 
-#####Starting Steps: 
+##### Starting Steps: 
 1. First type in your zipcode. **This is required** 
 2. Add you have the option to add filters like: 
     * Mile radius 
