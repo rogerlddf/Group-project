@@ -1,0 +1,53 @@
+body { 
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffebee; 
+    color: #ffff; 
+
+}
+
+nav { 
+    margin-bottom: 50px;
+}
+
+#navlogo { 
+    margin: 2px; 
+    margin-left: 18px;
+    margin-right: 10px; 
+    height: 60px; 
+    width: 60px; 
+    float: left; 
+}
+
+.navbar-brand { 
+    font-size: 50px; 
+    float: left; 
+}
+
+#submit-button { 
+    float: right; 
+    margin-right: 20px; 
+    margin-top: 15px; 
+    border-radius: 25px;
+    
+}
+
+#user-zipcode { 
+    width: 25%; 
+    background-color: #ffff; 
+    text-decoration: none; 
+    float: right; 
+    margin-right: 20px; 
+    margin-top: 10px; 
+    border-radius: 50px;
+    padding: 1px;
+    padding-left: 2px;
+    border: none; 
+    text-align: center; 
+}
+
+#ateball-display { 
+    height: 500px; 
+    width: auto;
+    /* margin: 50px; */
+    /* align-content: center;  */
+}
