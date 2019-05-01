@@ -1,4 +1,10 @@
 
+var modal = document.getElementById('restaurant-display');
+// Get the button that opens the modal
+var btn = document.getElementById("submit-button");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
 $("#submit-button").on("click", function() {
 
  event.preventDefault();
@@ -43,8 +49,21 @@ $("#submit-button").on("click", function() {
           console.log(restAddress);
           console.log(restPrice);
           console.log(restRating);      
-          console.log(restWeb);      
+          console.log(restWeb);   
+
+          $("#restaurant-name").html(restName);
+          $("#address").html(restAddress);
+          $("#price-range").html(restPrice);   
+          $("#star-rating").html(restRating);   
+          $("#add-website").attr("href", restWeb);   
+
 
       });
 
+    modal.style.display = "block"
+   
    });
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
