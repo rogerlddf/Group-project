@@ -10,21 +10,36 @@
 
   </head>
   <body>
+
     <header>
         <nav class="nav-wrapper red darken-4">
           <div class="ateball-logo"> 
             <img id="navlogo" src="Assets/Images/ateballogo.png"> 
             <a class="navbar-brand"> AteBall</a>
           </div>
+
           <div class="input-info">
-              <a class="waves-effect waves-light btn black" id="submit-button">gimme food</a>
+              <a class="waves-effect waves-light btn black " id="submit-button" >gimme food</a>
               <input type="text" placeholder="Enter your zipcode" class="validate" id="user-zipcode" required> 
           </div>
         </nav>
     </header> 
     
     <div class="container">
-      <img id="ateball-display" src="Assets/Images/giant-ateball-empty.png"> 
+      <div class="responsive-img">
+        <img class="responsive-img" id="ateball-display" src="Assets/Images/giant-ateball-empty.png"> 
+      </div> 
+
+      <div class="modal" id="restaurant-display">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <h3 class="center modal-text" id="restaurant-name">Restaurant Name</h3>
+            <li class="left modal-text" id="address">Restaurant Address</li> 
+            <li class="left modal-text" id="price-range">Restaurant Price Range</li>
+            <li class="left modal-text" id="star-rating">Restaurant Star Rating</li> 
+            <li class="left modal-text" id="website"> Click <a id="add-website" href="#">here</a> to go to the restaurants website</li>
+          </div>   
+      </div>
 
     </div>
 
