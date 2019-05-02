@@ -1,10 +1,11 @@
+/* For the whole page*/
 body { 
     font-family: 'Roboto', sans-serif;
     background-color: #ffebee; 
     color: #ffff; 
 
 }
-
+/* For the nav bar  */
 nav { 
     margin-bottom: 50px;
 }
@@ -22,7 +23,7 @@ nav {
     font-size: 50px; 
     float: left; 
 }
-
+/* For submit (gimme food) button */
 #submit-button { 
     float: right; 
     margin-right: 20px; 
@@ -30,7 +31,7 @@ nav {
     border-radius: 25px;
     
 }
-
+/* For the input on the nav bar */
 #user-zipcode { 
     width: 25%; 
     background-color: #ffff; 
@@ -44,10 +45,71 @@ nav {
     border: none; 
     text-align: center; 
 }
-
-#ateball-display { 
-    height: 500px; 
-    width: auto;
-    /* margin: 50px; */
-    /* align-content: center;  */
+/* For the giant ateball in the container */
+.ateball-img { 
+    height: auto; 
+    width: 100%;
 }
+/* To shake giant ateball */
+.shakeball { 
+    animation: shake 5.0s; 
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+/* For the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 0px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #fefefe;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    width: 80%;
+  }
+
+  .modal-text { 
+      font-size: 25px;
+      color: black; 
+      padding-top: 25px;
+      
+  }
+  
+  #restaurant-name { 
+      font-size: 40px; 
+  }
+  /* The Close Button */
+  .close {
+    color: #b71c1c;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
