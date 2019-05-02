@@ -5,7 +5,7 @@
       <title>AteBall</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
   </head>
@@ -14,7 +14,7 @@
     <header>
         <nav class="nav-wrapper red darken-4">
           <div class="ateball-logo"> 
-            <img id="navlogo" src="Assets/Images/ateballogo.png"> 
+            <img id="navlogo" src="images/ateballogo.png"> 
             <a class="navbar-brand"> AteBall</a>
           </div>
 
@@ -24,6 +24,7 @@
           </div>
         </nav>
     </header> 
+
     
     <div class="container">
       <div class="responsive-img">
@@ -41,10 +42,24 @@
           </div>   
       </div>
 
+      <div class="modal" id="restaurant-display">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <h3 class="center modal-text" id="restaurant-name"></h3>
+            <li class="left modal-text" id="address"></li> 
+            <li class="left modal-text" id="price-range"></li>
+            <li class="left modal-text" id="star-rating"></li> 
+            <li class="left modal-text" id="website"> Click <a id="add-website" >here</a> to go to the restaurants website</li>
+          </div>   
+      </div>
+
+    </div>
+    <div class="container center-align">
+      <div id="map"></div>
     </div>
 
 
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDrqqmdBN1k9LVmozItBeMjne5I5h8edc&libraries=places" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="Assets/Javascript/ateballLogo.js"></script>
