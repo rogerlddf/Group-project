@@ -1,14 +1,11 @@
-/* For the whole page*/
+/* For the whole page */
 body { 
     font-family: 'Roboto', sans-serif;
-    background-color: #ffebee; 
+    background-color: #b71c1c; 
     color: #ffff; 
 
 }
 /* For the nav bar  */
-nav { 
-    margin-bottom: 50px;
-}
 
 #navlogo { 
     margin: 2px; 
@@ -22,34 +19,37 @@ nav {
 .navbar-brand { 
     font-size: 50px; 
     float: left; 
+    color: #ffff;
 }
 /* For submit (gimme food) button */
 #submit-button { 
-    float: right; 
-    margin-right: 20px; 
+    float: left; 
+    margin-left: 20px; 
     margin-top: 15px; 
     border-radius: 25px;
+
     
 }
-/* For the input on the nav bar */
-#user-zipcode { 
-    width: 25%; 
-    background-color: #ffff; 
-    text-decoration: none; 
-    float: right; 
-    margin-right: 20px; 
-    margin-top: 10px; 
-    border-radius: 50px;
-    padding: 1px;
-    padding-left: 2px;
-    border: none; 
-    text-align: center; 
+/* For Form */
+form { 
+  background-color: #ffff; 
+  border-radius: 25px; 
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+
+.address-form { 
+  width: auto;
+  height: auto; 
 }
 /* For the giant ateball in the container */
-.ateball-img { 
+#ateball-display { 
     height: auto; 
     width: 100%;
+    margin-bottom: 50px; 
 }
+
 /* To shake giant ateball */
 .shakeball { 
     animation: shake 5.0s; 
@@ -72,13 +72,14 @@ nav {
 /* For the modal */
 .modal {
     display: none; /* Hidden by default */
+    margin-top: 125px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 0px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 50%;
-    height: 50%; 
+    width: 80%;
+    height: 80%; 
     overflow: auto; /* Enable scroll if needed */
     background-color: #fefefe;
   }
@@ -87,6 +88,7 @@ nav {
     background-color: #fefefe;
     margin: auto;
     width: 80%;
+    overflow: scroll;
   }
 
   .modal-text { 
@@ -112,4 +114,9 @@ nav {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+/* For map display */
+  #map{
+    height:400px ;
+    width: 50%;
   }
