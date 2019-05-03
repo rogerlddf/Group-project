@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+  console.log("testing0");
     var map;
     var marker;
     
@@ -9,15 +9,15 @@ $(document).ready(function(){
       var position = new google.maps.LatLng(coord.latitude, coord.longitude);
   
       if(!marker) {
+        console.log("testing1");
         marker = new google.maps.Marker({
           map: map,
           position: position
         });
-  
       } else {
         marker.setPosition(position);
       }
-  
+      console.log("testing2");
       map.panTo(position);
       map.setZoom(15);
       //Show the map after we got a random result
@@ -27,6 +27,7 @@ $(document).ready(function(){
     };
   
     function initMap(){
+      console.log("testing3");
       // Map options
       var options = {
         scaleControl: true,
@@ -43,9 +44,10 @@ $(document).ready(function(){
       url:"https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyBDrqqmdBN1k9LVmozItBeMjne5I5h8edc&callback=initMap",
       type:"GET",
     }).then(function(response){
-          // console.log(response);
+          console.log(response);
       initMap();
     })
+    console.log("testing4");
     //hiding map in the main page
     document.getElementById("map").style.display = "none";
   });

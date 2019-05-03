@@ -1,4 +1,4 @@
-
+  
 var modal = document.getElementById('restaurant-display');
 // Get the button that opens the modal
 var btn = document.getElementById("submit-button");
@@ -43,7 +43,11 @@ $("#submit-button").on("click", function() {
   var restAddress = pickedLocation.location.display_address;
   var restPrice = pickedLocation.price;
   var restRating = pickedLocation.rating;
-  var restWeb = pickedLocation.url;   
+  var restWeb = pickedLocation.url;
+  var restCoordinates = pickedLocation.coordinates;
+       
+    console.log(pickedLocation.coordinates);
+      updateMapCoordinates(restCoordinates);   
 
           console.log(restName);
           console.log(restAddress);
