@@ -1,4 +1,3 @@
-  
 var modal = document.getElementById('restaurant-display');
 // Get the button that opens the modal
 var btn = document.getElementById("submit-button");
@@ -29,8 +28,8 @@ $("#submit-button").on("click", function() {
 }).then(function(response) {
 
   var results = response.data;
-  var randomizer =Math.floor(Math.random() * 20+ 1);
   var allLocations = response.businesses;
+  var randomizer =Math.floor(Math.random() * allLocations.length);
   var pickedLocation = allLocations[randomizer];
 
           console.log(response);
@@ -45,9 +44,8 @@ $("#submit-button").on("click", function() {
   var restRating = pickedLocation.rating;
   var restWeb = pickedLocation.url;
   var restCoordinates = pickedLocation.coordinates;
-       
     console.log(pickedLocation.coordinates);
-      updateMapCoordinates(restCoordinates);   
+    updateMapCoordinates(restCoordinates);   
 
           console.log(restName);
           console.log(restAddress);
@@ -64,10 +62,21 @@ $("#submit-button").on("click", function() {
 
       });
 
-    modal.style.display = "block"
+      $("#ateball-display").addClass("shakeball");
+
+
+      setTimeout(function(){
+        // modal.style.display = "block"
+        $(modal).css("opacity",1)
+        $(modal).css("z-index",1)
+       }, 3000);
+
    
    });
 
 span.onclick = function() {
-  modal.style.display = "none";
+  // modal.style.display = "none";
+  $(modal).css("opacity",0)
+  $(modal).css("z-index",-99999)
+  $("#ateball-display").removeClass("shakeball");
 }

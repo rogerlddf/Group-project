@@ -28,15 +28,15 @@
                 <input id="user-street" type="text" class="validate address-form" placeholder="Street Address" required>
               </div>
             
-              <div class="input-field col s12">
+              <div class="input-field col s4">
                 <input id="user-city" type="text" class="validate address-form" placeholder="City" required>
               </div>
           
-              <div class="input-field col s12">
+              <div class="input-field col s4">
                 <input id="user-state" type="text" class="validate address-form" placeholder="State" required>
               </div>
           
-              <div class="input-field col s12">
+              <div class="input-field col s4">
                 <input id="user-zipcode" type="text" class="validate address-form" placeholder="Zipcode" required>
               </div>
 
@@ -48,18 +48,21 @@
 
       <div class="responsive-img">
         <img class="responsive-img" id="ateball-display" src="Assets/Images/giant-ateball-empty.png"> 
-        <div class="center" id="map"></div>
       </div> 
 
       <div class="modal" id="restaurant-display">
         <div class="modal-content">
           <span class="close">&times;</span>
-            <h3 class="center modal-text" id="restaurant-name"></h3>
-            <li class="left modal-text" id="address"></li> 
-            <li class="left modal-text" id="price-range"></li>
-            <li class="left modal-text" id="star-rating"></li> 
-            <li class="left modal-text" id="website"> Click <a id="add-website" >here</a> to go to the restaurants website</li>
-          </div>   
+          <ul class="modal-list">
+            <h3 id="restaurant-name"></h3>
+            <li id="address"></li> 
+            <li  id="price-range"></li>
+            <li id="star-rating"></li> 
+            <li id="website"> Click <a id="add-website" >here</a> to go to the restaurants website</li>
+            </ul>
+            <div class="center" id="map"></div>
+          </div> 
+            
         </div>
       </div>
 

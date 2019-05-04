@@ -1,122 +1,143 @@
 /* For the whole page */
 body { 
-    font-family: 'Roboto', sans-serif;
-    background-color: #b71c1c; 
-    color: #ffff; 
+  font-family: 'Roboto', sans-serif;
+  background-color: #b71c1c; 
+  color: #ffff; 
 
 }
 /* For the nav bar  */
 
 #navlogo { 
-    margin: 2px; 
-    margin-left: 18px;
-    margin-right: 10px; 
-    height: 60px; 
-    width: 60px; 
-    float: left; 
+  margin: 2px; 
+  margin-left: 18px;
+  margin-right: 10px; 
+  height: 60px; 
+  width: 60px; 
+  float: left; 
 }
 
 .navbar-brand { 
-    font-size: 50px; 
-    float: left; 
-    color: #ffff;
+  font-size: 50px; 
+  float: left; 
+  color: #ffff;
 }
 /* For submit (gimme food) button */
 #submit-button { 
-    float: left; 
-    margin-left: 20px; 
-    margin-top: 15px; 
-    border-radius: 25px;
+  float: left; 
+  margin-left: 20px; 
+  margin-top: 15px; 
+  border-radius: 25px;
 
-    
+  
 }
 /* For Form */
 form { 
-  background-color: #ffff; 
-  border-radius: 25px; 
-  margin-top: 50px;
-  margin-left: 50px;
+background-color: #ffff; 
+border-radius: 25px; 
+margin-top: 50px;
+margin-left: 50px;
 
 }
 
 .address-form { 
-  width: auto;
-  height: auto; 
+width: auto;
+height: auto; 
 }
 /* For the giant ateball in the container */
 #ateball-display { 
-    height: auto; 
-    width: 100%;
-    margin-bottom: 50px; 
+  height: auto; 
+  width: 100%;
+  margin-bottom: 50px; 
 }
 
 /* To shake giant ateball */
 .shakeball { 
-    animation: shake 5.0s; 
-    animation-iteration-count: infinite;
+  animation: shake 5.0s; 
+  animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 /* For the modal */
 .modal {
-    display: none; /* Hidden by default */
-    margin-top: 125px;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 0px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 80%;
-    height: 80%; 
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #fefefe;
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    width: 80%;
-    overflow: scroll;
-  }
+  display: block; /* Hidden by default */
+  margin-top: 125px;
+  position: fixed; /* Stay in place */
+  z-index: -99999; /* Sit on top */
+  padding-top: 0px; /* Location of the box */
+  left: 0;
+  opacity: 0;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #fefefe;
+}
 
-  .modal-text { 
-      font-size: 25px;
-      color: black; 
-      padding-top: 25px;
-      
-  }
-  
-  #restaurant-name { 
-      font-size: 40px; 
-  }
-  /* The Close Button */
-  .close {
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  width: 100%;
+  /* overflow: scroll; */
+}
+
+.modal-list li{
+    font-size: 25px;
+    color: black;
+    padding-top: 25px;
+}
+
+#restaurant-name {
+    font-size: 40px;
     color: #b71c1c;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-/* For map display */
-  #map{
-    height:400px ;
-    width: 50%;
-  }
+    text-align: center;
+    border-bottom: 1px solid #0000001c;
+    padding-bottom: 2%;
+}
+/* The Close Button */
+.close {
+  color: #b71c1c;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#map{
+  height:400px;
+  width: 100%;
+}
+
+
+.modal::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #00000038;
+}
+
+.modal::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: #f5f5f500;
+}
+
+.modal::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+}
