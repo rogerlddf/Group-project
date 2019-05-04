@@ -2,6 +2,10 @@ $(document).ready(function(){
   
     var map;
     var marker;
+    var directionsService;
+    var directionsDisplay;
+    var trafficLayer;
+    
     
     // Updating the map with the new coordinates and putting a marker in restaurant location
     window.updateMapCoordinates = function(coord) {
@@ -17,7 +21,12 @@ $(document).ready(function(){
       } else {
         marker.setPosition(position);
       }
-  
+      
+      var street = $("#user-street").val();
+      var city = $("#user-city").val();
+      var state = $("#user-state").val();
+      var origin = street + ', ' + city + ', ' + state;
+      calculateAndDisplayRoute(origin, position);
       map.panTo(position);
       map.setZoom(15);
       //Show the map after we got a random result
@@ -25,17 +34,40 @@ $(document).ready(function(){
       
       
     };
+
+    function calculateAndDisplayRoute(origin, target) {
+
+      directionsService.route({
+        origin: origin,
+        destination: target,
+        travelMode: 'DRIVING'
+      }, function(response, status) {
+        if(status === 'OK')
+          directionsDisplay.setDirections(response);
+        else console.log('Error fetching directions', status);
+      });
+
+    }
   
     function initMap(){
       // Map options
       var options = {
         scaleControl: true,
-        zoom:6,
+        zoom:15,
         center:{lat:25.7617, lng:-80.1918},
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
       //New map
       map = new google.maps.Map(document.getElementById("map"), options);
+
+      directionsService = new google.maps.DirectionsService;
+      directionsDisplay = new google.maps.DirectionsRenderer;
+      trafficLayer = new google.maps.TrafficLayer;
+
+      directionsDisplay.setMap(map);
+      trafficLayer.setMap(map);
+
+      console.log('Init map!');
       
     }
     

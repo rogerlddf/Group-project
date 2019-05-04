@@ -12,21 +12,40 @@
   <body>
 
     <header>
-        <nav class="nav-wrapper red darken-4">
-          <div class="ateball-logo"> 
-            <img id="navlogo" src="Assets/images/ateballogo.png"> 
-            <a class="navbar-brand"> AteBall</a>
-          </div>
-
-          <div class="input-info">
-              <a class="waves-effect waves-light btn black " id="submit-button" >gimme food</a>
-              <input type="text" placeholder="Enter your zipcode" class="validate" id="user-zipcode" required> 
-          </div>
-        </nav>
+        <div class="ateball-logo"> 
+          <img id="navlogo" src="Assets/Images/ateballogo.png"> 
+          <a class="navbar-brand"> AteBall</a>
+        </div>
     </header> 
 
-    
-    <div class="container">
+    <div class="container"> 
+
+      <div class="col s12 m12 l12">
+        <div class="row">
+          <form class="col s12 m12 l12 ">
+            <div class="row info-input">
+              <div class="input-field col s12">
+                <input id="user-street" type="text" class="validate address-form" placeholder="Street Address" required>
+              </div>
+            
+              <div class="input-field col s4">
+                <input id="user-city" type="text" class="validate address-form" placeholder="City" required>
+              </div>
+          
+              <div class="input-field col s4">
+                <input id="user-state" type="text" class="validate address-form" placeholder="State" required>
+              </div>
+          
+              <div class="input-field col s4">
+                <input id="user-zipcode" type="text" class="validate address-form" placeholder="Zipcode" required>
+              </div>
+
+              <a class="waves-effect waves-light btn black modal-trigger" id="submit-button">gimme food</a>
+            </div>
+          </form>
+        </div>
+      </div> 
+
       <div class="responsive-img">
         <img class="responsive-img" id="ateball-display" src="Assets/Images/giant-ateball-empty.png"> 
       </div> 
@@ -34,30 +53,20 @@
       <div class="modal" id="restaurant-display">
         <div class="modal-content">
           <span class="close">&times;</span>
-            <h3 class="center modal-text" id="restaurant-name"></h3>
-            <li class="left modal-text" id="address"></li> 
-            <li class="left modal-text" id="price-range"></li>
-            <li class="left modal-text" id="star-rating"></li> 
-            <li class="left modal-text" id="website"> Click <a id="add-website" >here</a> to go to the restaurants website</li>
-          </div>   
-      </div>
-
-      <div class="modal" id="restaurant-display">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-            <h3 class="center modal-text" id="restaurant-name"></h3>
-            <li class="left modal-text" id="address"></li> 
-            <li class="left modal-text" id="price-range"></li>
-            <li class="left modal-text" id="star-rating"></li> 
-            <li class="left modal-text" id="website"> Click <a id="add-website" >here</a> to go to the restaurants website</li>
-          </div>   
+          <ul class="modal-list">
+            <h3 id="restaurant-name"></h3>
+            <li id="address"></li> 
+            <li  id="price-range"></li>
+            <li id="star-rating"></li> 
+            <li id="website"> Click <a id="add-website" >here</a> to go to the restaurants website</li>
+            </ul>
+            <div class="center" id="map"></div>
+          </div> 
+            
+        </div>
       </div>
 
     </div>
-    <div class="container center-align">
-      <div id="map"></div>
-    </div>
-
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDrqqmdBN1k9LVmozItBeMjne5I5h8edc&libraries=places" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -65,11 +74,9 @@
   <script src="Assets/Javascript/ateballLogo.js"></script>
   <script src="Assets/Javascript/mainpage.js"></script>
   <script src="Assets/Javascript/yelp-api.js"></script>
+  <script src="Assets/Javascript/maps.js"></script>
 
-  <script
-  src="https://code.jquery.com/jquery-3.4.0.min.js"
-  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 
 </body>
 </html>
