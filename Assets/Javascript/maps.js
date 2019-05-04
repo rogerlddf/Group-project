@@ -81,4 +81,3 @@ $(document).ready(function(){
     //hiding map in the main page
     document.getElementById("map").style.display = "none";
   });
-  

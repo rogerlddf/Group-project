@@ -1,4 +1,3 @@
-
 var modal = document.getElementById('restaurant-display');
 // Get the button that opens the modal
 var btn = document.getElementById("submit-button");
